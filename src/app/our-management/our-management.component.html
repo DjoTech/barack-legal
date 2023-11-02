@@ -1,4 +1,4 @@
-<div id="ourmanagement" class="carousel slide" data-bs-ride="true" style="height: 700px;">
+<div id="ourmanagement" class="carousel slide m-5" data-bs-ride="true">
     <div class="carousel-indicators" style="bottom: -50px;">
       <button type="button" data-bs-target="#ourmanagement" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1" style="width: 70px;"></button>
       <button type="button" data-bs-target="#ourmanagement" data-bs-slide-to="1" aria-label="Slide 2" class="bg-dark" style="width: 70px;"></button>
@@ -8,11 +8,11 @@
         <div class="carousel-item {{ management.active ? 'active' : '' }}">
           <div class="card mb-3 border-0 d-block mx-auto" style="max-width: 75rem;">
             <div class="row no-gutters">
-              <div class="col">
-                <img src="{{ management.image }}" class="card-img h-100 object-fit-cover"
+              <div class="col-md-6">
+                <img src="{{ management.image }}" class="card-img h-100 object-fit-contain"
                      alt="{{ management.name }}" >
               </div>
-              <div class="col" style="background-color:#d4d4d4; border-radius:.25rem;">
+              <div class="col-md-6" style="background-color:#d4d4d4; border-radius:.25rem;">
                 <div class="card-body">
                   <h2 class="card-title">{{ management.name }}</h2>
                   <h2 class="card-title mt-3">{{ management.position }}</h2>

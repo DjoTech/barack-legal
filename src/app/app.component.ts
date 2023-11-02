@@ -1,4 +1,7 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+} from '@angular/core';
 
 
 @Component({
@@ -9,10 +12,6 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 })
 export class AppComponent {
 
-
-  constructor(){
-
-  }
-
+  show = false
 
 }

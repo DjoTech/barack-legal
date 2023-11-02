@@ -1,10 +1,10 @@
-<div class="p-md-5" >
+<div class="p-md-5 m-5" id="ourexperience">
   <div class="row">
     <div class="col">
       <h1 class="text-center fw-bolder mb-5">Our Experiences</h1>
     </div>
   </div>
-  <div class="row mt-5">
+  <div class="row justify-content-around align-items-center">
     <div class="col-md-3">
       <div class="row flex-column">
         <div class="col" *ngFor="let type of types">
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 mt-5">
       <ng-container *ngIf="contents.length <= 1">
         <p *ngFor="let content of contents">{{ content }}</p>
       </ng-container>
