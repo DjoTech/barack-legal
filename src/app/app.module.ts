@@ -15,6 +15,7 @@ import { OurManagementComponent } from './our-management/our-management.componen
 import { OurClientsComponent } from './our-clients/our-clients.component';
 import { HomeComponent } from './home/home.component';
 import { KepailitanPtKaisoMaritimGlobalDalamPailitComponent } from './kepailitan-pt-kaiso-maritim-global-dalam-pailit/kepailitan-pt-kaiso-maritim-global-dalam-pailit.component';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { KepailitanPtKaisoMaritimGlobalDalamPailitComponent } from './kepailitan
     OurManagementComponent,
     OurClientsComponent,
     HomeComponent,
-    KepailitanPtKaisoMaritimGlobalDalamPailitComponent
+    KepailitanPtKaisoMaritimGlobalDalamPailitComponent,
   ],
     imports: [
         BrowserModule,
@@ -35,7 +36,8 @@ import { KepailitanPtKaisoMaritimGlobalDalamPailitComponent } from './kepailitan
         FormsModule,
         NgFor,
         NgClass,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgxExtendedPdfViewerModule
     ],
   providers: [],
   bootstrap: [AppComponent],
