@@ -12,7 +12,7 @@ export class OurExperiencesComponent {
     {
       name: 'Dispute Resolutions',
       key: "DISPUTE_RESOLUTION",
-      expanded: false
+      expanded: true
     },
     {
       name: 'Corporate Legals',
@@ -107,6 +107,7 @@ export class OurExperiencesComponent {
   }
 
   onClickType(item: any): void {
+    this.types.forEach(i => i.expanded = i.key === item.key)
     this.contents =  this.lists.find(type => type.type === item.key)?.contents
     this.ref.detectChanges()
   }

@@ -1,4 +1,6 @@
-<div id="ourmanagement" class="carousel slide m-5" data-bs-ride="true">
+<div class="container-fluid">
+  <h1 class="text-center mt-5"><span class="fw-bolder">Meet</span> Our <span class="fw-bolder">Leader</span></h1>
+  <div id="ourmanagement" class="carousel slide m-5" data-bs-ride="true">
     <div class="carousel-indicators" style="bottom: -50px;">
       <button type="button" data-bs-target="#ourmanagement" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1" style="width: 70px;"></button>
       <button type="button" data-bs-target="#ourmanagement" data-bs-slide-to="1" aria-label="Slide 2" class="bg-dark" style="width: 70px;"></button>
@@ -6,15 +8,16 @@
     <div class="carousel-inner">
       <ng-container *ngFor="let management of managements">
         <div class="carousel-item {{ management.active ? 'active' : '' }}">
-          <div class="card mb-3 border-0 d-block mx-auto" style="max-width: 75rem;">
-            <div class="row no-gutters">
+          <div class="card mb-3 border-0 mx-auto" style="max-width: 90rem;">
+            <div class="row">
               <div class="col-md-6">
-                <img src="{{ management.image }}" class="card-img h-100 object-fit-contain"
+                <img [src]="management.image"
+                     class="card-img h-100 object-fit-contain img-thumbnail border-0"
                      alt="{{ management.name }}" >
               </div>
-              <div class="col-md-6" style="background-color:#d4d4d4; border-radius:.25rem;">
+              <div class="col-md-6 rounded-5 bg-gray">
                 <div class="card-body">
-                  <h2 class="card-title">{{ management.name }}</h2>
+                  <h2 class="card-title fw-bolder">{{ management.name }}</h2>
                   <h2 class="card-title mt-3">{{ management.position }}</h2>
                   <p class="card-text text-left mt-3 text-justify">{{ management.description }}</p>
                   <p class="card-text text-left text-decoration-underline mt-3">Formal Education</p>
@@ -34,11 +37,13 @@
       </ng-container>
     </div>
     <div class="carousel-control-prev" data-bs-target="#ourmanagement" data-bs-slide="prev">
-      <button class="carousel-control-prev-icon bg-dark btn rounded-circle" type="button" aria-hidden="true"></button>
+      <button class="carousel-control-prev-icon bg-dark text-center btn rounded-circle" type="button" aria-hidden="true"></button>
       <span class="visually-hidden">Previous</span>
     </div>
     <div class="carousel-control-next" data-bs-target="#ourmanagement" data-bs-slide="next">
-      <button class="carousel-control-next-icon bg-dark btn rounded-circle" type="button" aria-hidden="true"></button>
+      <button class="carousel-control-next-icon text-center bg-dark btn rounded-circle" type="button" aria-hidden="true"></button>
       <span class="visually-hidden">Next</span>
     </div>
   </div>
+</div>
+

@@ -1,0 +1,5 @@
+.divider {
+  height: 200px; /* Set the height of the divider */
+  width: 1px; /* Set the width of the divider */
+  background-color: #000; /* Set the color of the divider */
+}

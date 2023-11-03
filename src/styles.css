@@ -1,14 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 
-.pointer {
+.custom-card {
+  height: 700px; /* Set the fixed height of the cards */
+  overflow-y: auto;
+}
+
+.pointer, .pointer-type {
   cursor: pointer;
 }
 
 .pointer:hover {
   opacity: 0.5;
-
 }
 
+.pointer-type:hover {
+  font-weight: bold;
+  font-size: x-large;
+  border-width: 1px;
+  border-bottom: #000 solid;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
 .sidebar {
   width: 200px;

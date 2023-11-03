@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { NgFor } from '@angular/common';
+import {NgFor, NgOptimizedImage} from '@angular/common';
 import { NgClass } from '@angular/common';
 import { OurExperiencesComponent } from './our-experiences/our-experiences.component';
 import { ContactComponent } from './contact/contact.component';
@@ -29,15 +29,16 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
     HomeComponent,
     KepailitanPtKaisoMaritimGlobalDalamPailitComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    NgFor,
-    NgClass,
-    ReactiveFormsModule,
-    NgxExtendedPdfViewerModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        NgFor,
+        NgClass,
+        ReactiveFormsModule,
+        NgxExtendedPdfViewerModule,
+        NgOptimizedImage,
+    ],
   providers: [],
   bootstrap: [AppComponent],
 })
