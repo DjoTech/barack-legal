@@ -3,3 +3,8 @@
   width: 1px; /* Set the width of the divider */
   background-color: #000; /* Set the color of the divider */
 }
+
+.img-client {
+  max-width: 150px;
+  max-height: 150px;
+}
