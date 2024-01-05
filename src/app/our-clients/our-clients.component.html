@@ -1,12 +1,12 @@
 <div class="container" id="ourclient">
   <div class="row text-center">
-    <div class="col-md-12">
+    <div class="col-md-12 mt-3">
       <h1>Our Clients</h1>
     </div>
   </div>
   <div class="row justify-content-center align-items-center">
     <div
-      *ngFor="let client of clients" class="col-md-4 text-center img-client" >
+      *ngFor="let client of clients" class="col-md-12 text-center img-client mx-5" >
       <img src="{{ client.image_url }}"  alt="{{ client.name }}" class=" border-0 pointer img-client" onclick="window.open('https://www.finpay.id/', '_blank');"></div>
 <!--    <div class="col-md-1 text-center"><img src="assets/client/Mitratel.png"  alt="mitratel" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://www.mitratel.co.id/', '_blank');"></div>-->
 <!--    <div class="col-md-1 text-center"><img src="assets/client/Tristar.png" alt="tristar" class="img-thumbnail border-0 img-client pointer"></div>-->
