@@ -8,7 +8,7 @@
     <div class="col-md-12 d-flex justify-content-center align-items-center">
       <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel" data-interval="7000" style="width: 100%; overflow: hidden;">
         <div class="carousel-inner" style="width: 100%;">
-          <div *ngFor="let i of chunkedClients; let j = index" class="carousel-item" [class.active]="j === 0" style="height: 24vh; width: 100%;">
+          <div *ngFor="let i of chunkedClients; let j = index" class="carousel-item" [class.active]="j === 0" style="height: 28vh; width: 100%;">
             <div class="d-flex flex-wrap justify-content-center align-items-center h-100">
               <div *ngFor="let client of i" class="col-md-4 text-center img-client mx-2" style="height: 40%; display: flex; align-items: center;">
                 <img [src]="client.image_url" alt="{{ client.name }}" class="border-0 pointer img-client" style="max-height: 12vh; max-width: 12vh;">
