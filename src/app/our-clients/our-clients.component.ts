@@ -78,6 +78,16 @@ export class OurClientsComponent implements OnInit{
       image_url: "assets/client/telkom property.png",
     },
   ]
+  chunk(array: any[], size: number) {
+    const results = [];
+    while (array.length) {
+      results.push(array.splice(0, size));
+    }
+    return results;
+  }
+
+  chunkedClients = this.chunk(this.clients, 6);
+
 
   constructor() {
   }

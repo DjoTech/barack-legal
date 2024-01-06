@@ -5,25 +5,26 @@
     </div>
   </div>
   <div class="row justify-content-center align-items-center">
-    <div
-      *ngFor="let client of clients" class="col-md-12 text-center img-client mx-5" >
-      <img src="{{ client.image_url }}"  alt="{{ client.name }}" class=" border-0 pointer img-client" onclick="window.open('https://www.finpay.id/', '_blank');"></div>
-<!--    <div class="col-md-1 text-center"><img src="assets/client/Mitratel.png"  alt="mitratel" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://www.mitratel.co.id/', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/Tristar.png" alt="tristar" class="img-thumbnail border-0 img-client pointer"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/VAI.png" alt="vai" class="img-thumbnail border-0 img-client pointer"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/inti persada.png"  alt="inti persada" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://www.persadanusantara.co.id/', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/Phintraco.png"  alt="phintraco" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://phintracosekuritas.com/', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/Josi.png" alt="josi" class="img-thumbnail border-0 img-client pointer"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/Azeta.png" alt="azeta" class="img-thumbnail border-0 img-client pointer"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/Protelindo.png"  alt="protelindo" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://www.protelindo.net/home', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/Bach.png"  alt="bach" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://www.bach.co.id/bach-multi-infrastruktur/', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/PUPR.png"  alt="pupr" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://pu.go.id/', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/kreddo.png"  alt="kreddo" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://kreddo.com/', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/MBS.png" alt="mbs" class="img-thumbnail border-0 img-client pointer"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/UI.png"  alt="universitas indonesia" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://www.ui.ac.id/', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/Kominfo.png"  alt="kominfo" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://www.kominfo.go.id/', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/Layton.png"  alt="layton" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://layton.co.id/', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/paul& co.png"  alt="paul & co" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://www.paulasia.com/id/', '_blank');"></div>-->
-<!--    <div class="col-md-1 text-center"><img src="assets/client/telkom property.png"  alt="telkom property" class="img-thumbnail border-0 img-client pointer" onclick="window.open('https://www.telkomproperty.co.id/', '_blank');"></div>-->
+    <div class="col-md-12 d-flex justify-content-center align-items-center">
+      <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel" data-interval="7000" style="width: 100%; overflow: hidden;">
+        <div class="carousel-inner" style="width: 100%;">
+          <div *ngFor="let i of chunkedClients; let j = index" class="carousel-item" [class.active]="j === 0" style="height: 20vh; width: 100%;">
+            <div class="d-flex flex-wrap justify-content-center align-items-center h-100">
+              <div *ngFor="let client of i" class="col-md-4 text-center img-client mx-2" style="height: 40%; display: flex; align-items: center;">
+                <img [src]="client.image_url" alt="{{ client.name }}" class="border-0 pointer img-client" style="max-height: 10vh; max-width: 10vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#logoCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark text-center btn rounded-circle" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#logoCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon text-center bg-dark btn rounded-circle" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
