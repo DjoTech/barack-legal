@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "barrack-legal": {
+    "barack-legal": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/barrack-legal",
+            "outputPath": "dist/barack-legal",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "barrack-legal:build:production"
+              "browserTarget": "barack-legal:build:production"
             },
             "development": {
-              "browserTarget": "barrack-legal:build:development"
+              "browserTarget": "barack-legal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "barrack-legal:build"
+            "browserTarget": "barack-legal:build"
           }
         },
         "test": {
