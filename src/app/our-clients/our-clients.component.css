@@ -2,3 +2,15 @@
   max-width: 18vh;
   max-height: 18vh;
 }
+.carousel-inner {
+  transition: none; /* Disable sliding transition */
+}
+
+.carousel-item {
+  transition: none !important; /* Disable sliding transition for each item */
+}
+
+/* Optional: If you want to remove the sliding indicators (dots) */
+.carousel-indicators {
+  display: none;
+}
