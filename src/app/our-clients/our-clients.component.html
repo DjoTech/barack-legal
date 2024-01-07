@@ -7,23 +7,23 @@
   <div class="row justify-content-center align-items-center">
     <div class="col-md-12 d-flex justify-content-center align-items-center">
       <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel" data-interval="7000" style="width: 100%; overflow: hidden;">
-        <div class="carousel-inner" style="width: 100%;">
-          <div *ngFor="let i of chunkedClients; let j = index" class="carousel-item" [class.active]="j === 0" style="height: 28vh; width: 100%;">
+        <div class="carousel-inner mx-3" style="width: 100%;">
+          <div *ngFor="let i of chunkedClients; let j = index" class="carousel-item" [class.active]="j === 0" style="height: 32vh; width: 100%;">
             <div class="d-flex flex-wrap justify-content-center align-items-center h-100">
-              <div *ngFor="let client of i" class="col-md-4 text-center img-client mx-2" style="height: 40%; display: flex; align-items: center;">
-                <img [src]="client.image_url" alt="{{ client.name }}" class="border-0 pointer img-client" style="max-height: 12vh; max-width: 12vh;">
+              <div *ngFor="let client of i" class="col-md-4 text-center img-client mx-2" style="height: 50%; display: flex; align-items: center;">
+                <img src="{{client.image_url}}" alt="{{ client.name }}" class="border-0 pointer img-client" (click)="openUrl(client.url)" style="max-height: 14vh; max-width: 14vh;">
               </div>
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#logoCarousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-dark text-center btn rounded-circle" aria-hidden="true"></span>
+        <div class="carousel-control-prev">
+          <button class="carousel-control-prev-icon bg-dark text-center btn rounded-circle" aria-hidden="true" type="button" data-bs-slide="prev" data-bs-target="#logoCarousel"></button>
           <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#logoCarousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon text-center bg-dark btn rounded-circle" aria-hidden="true"></span>
+        </div>
+        <div class="carousel-control-next">
+          <button class="carousel-control-next-icon text-center bg-dark btn rounded-circle" aria-hidden="true" type="button" data-bs-slide="next" data-bs-target="#logoCarousel"></button>
           <span class="visually-hidden">Next</span>
-        </a>
+        </div>
       </div>
     </div>
   </div>
