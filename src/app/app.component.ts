@@ -10,8 +10,9 @@ import {
   styleUrls: ['./app.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
+export class AppComponent  {
 
   show = false
+  domain = "https://baracklegal.com"
 
 }

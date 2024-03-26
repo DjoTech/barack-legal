@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgFor, NgOptimizedImage} from '@angular/common';
+import {LocationStrategy, NgFor, NgOptimizedImage, PathLocationStrategy} from '@angular/common';
 import { NgClass } from '@angular/common';
 import { OurExperiencesComponent } from './our-experiences/our-experiences.component';
 import { ContactComponent } from './contact/contact.component';
@@ -15,6 +15,7 @@ import { OurClientsComponent } from './our-clients/our-clients.component';
 import { HomeComponent } from './home/home.component';
 import { KepailitanPtKaisoMaritimGlobalDalamPailitComponent } from './kepailitan-pt-kaiso-maritim-global-dalam-pailit/kepailitan-pt-kaiso-maritim-global-dalam-pailit.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
     KepailitanPtKaisoMaritimGlobalDalamPailitComponent,
   ],
     imports: [
+        PdfViewerModule,
         BrowserModule,
         AppRoutingModule,
         FormsModule,
@@ -39,7 +41,7 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
         NgxExtendedPdfViewerModule,
         NgOptimizedImage,
     ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

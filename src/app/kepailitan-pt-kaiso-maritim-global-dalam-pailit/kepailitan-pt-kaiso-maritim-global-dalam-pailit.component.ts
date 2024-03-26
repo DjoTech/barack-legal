@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { NgxExtendedPdfViewerService, pdfDefaultOptions } from 'ngx-extended-pdf-viewer';
 
 @Component({
@@ -8,8 +9,12 @@ import { NgxExtendedPdfViewerService, pdfDefaultOptions } from 'ngx-extended-pdf
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class KepailitanPtKaisoMaritimGlobalDalamPailitComponent {
-  
-  constructor(private pdfService: NgxExtendedPdfViewerService) {
+
+  constructor(
+    private pdfService: NgxExtendedPdfViewerService,
+    private router: Router,
+    private route: ActivatedRoute,
+  ) {
     /* More likely than not you don't need to tweak the pdfDefaultOptions.
        They are a collecton of less frequently used options.
        To illustrate how they're used, here are two example settings: */
@@ -19,6 +24,13 @@ export class KepailitanPtKaisoMaritimGlobalDalamPailitComponent {
     // Increasing this setting allows your users to use higher zoom factors,
     // trading image quality for performance.
 
-    
+
     }
+
+    onClick() {
+      window.location.reload()
+    }
+
+
+
 }

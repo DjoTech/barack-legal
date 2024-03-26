@@ -13,6 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
+            "preserveSymlinks": true,
             "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -47,7 +49,7 @@
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
+              "buildOptimizer": true
             },
             "development": {
               "buildOptimizer": false,
