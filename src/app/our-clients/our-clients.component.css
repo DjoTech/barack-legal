@@ -2,3 +2,10 @@
   max-width: 18vh;
   max-height: 18vh;
 }
+.carousel-inner {
+  transition: transform 0s ease-in-out; /* Disable sliding transition */
+}
+
+.carousel-item {
+  transition: transform 0s ease-in-out; /* Disable sliding transition for each item */
+}
